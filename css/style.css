@@ -1,9 +1,6 @@
 body {
   font-family: 
-    /* 英文字型優先順序 */ "Chakra Petch", "Arial",
-    /* 中文字型優先順序 */ "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
-    /* 後備字型 */ sans-serif;
-}
-bg {
-  background-color: #ffffff;
+    /* 英文字型優先順序 */ "Roboto Mono", "Helvetica", "Arial",
+    /* 中文字型優先順序 */ "Roboto Mono", "Noto Sans CJK TC", "PingFang TC",
+    "Microsoft JhengHei", /* 後備字型 */ sans-serif;
 }
