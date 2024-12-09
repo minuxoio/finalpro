@@ -1,9 +1,65 @@
 body {
   font-family: 
-    /* 英文字型優先順序 */ "Chakra Petch", "Arial",
-    /* 中文字型優先順序 */ "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
-    /* 後備字型 */ sans-serif;
+    /* 英文字型優先順序 */ "Roboto Mono", "Helvetica", "Arial",
+    /* 中文字型優先順序 */ "Roboto Mono", "Noto Sans CJK TC", "PingFang TC",
+    "Microsoft JhengHei", /* 後備字型 */ sans-serif;
+  background-color: #f9f9f9;
+  /* <uniquifier>: Use a unique and descriptive class name*/
+  /*<weight>: Use a value from 100 to 700*/
+
+  .roboto-mono-uniquifier {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
 }
-bg {
-  background-color: #ffffff;
+index {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header.navigation {
+  display: flex;
+  justify-content: space-between; /* 左中右區域 */
+  align-items: center; /* 垂直對齊 */
+  padding: 5vh 5vw; /* 外邊距以螢幕大小為基準 */
+}
+
+/* 左側導航樣式 */
+.nav-left {
+  display: flex; /* 設定橫向排列 */
+  gap: 2vw; /* 圖示之間的間距 */
+}
+
+.nav-left .icon {
+  width: 4vw; /* 圖示的寬度 */
+  height: 4vw; /* 圖示的高度，與寬度相同呈正方形 */
+  background-color: #00000000; /* 示例背景色，可替換為圖標 */
+  border-radius: 50%; /* 圓形圖標 */
+}
+
+/* 中間標題樣式 */
+.nav-center {
+  text-align: center;
+}
+
+.nav-center .logo img {
+  width: 20vw; /* Logo 寬度為視窗寬度的 20% */
+  height: auto; /* 自動高度 */
+  margin-bottom: 2vh;
+}
+
+.nav-center .title {
+  font-size: 2.5vh; /* 標題字體大小基於視窗高度 */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* 右側導航樣式 */
+.nav-right {
+  position: relative; /* 使用相對定位方便調整 */
+  text-align: right;
+  margin-right: 5vw; /* 與右側邊距保持 5vw */
 }
