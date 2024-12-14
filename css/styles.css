@@ -1,0 +1,137 @@
+body {
+  font-family: 
+      /* 英文字型優先順序 */ "Roboto Mono", "Helvetica", "Arial",
+    /* 中文字型優先順序 */ "Roboto Mono", "Noto Sans CJK TC", "PingFang TC",
+    "Microsoft JhengHei", /* 後備字型 */ sans-serif;
+  background-color: #c1c1c1;
+  /* <uniquifier>: Use a unique and descriptive class name*/
+  /*<weight>: Use a value from 100 to 700*/
+
+  .roboto-mono-uniquifier {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  /* uniquifier>: Use a unique and descriptive class name*/
+  /*<weight>: Use a value from 100 to 900*/
+
+  .noto-sans-tc-uniquifier {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+}
+
+/* 右側導航樣式 */
+.nav-right {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 4vh; /* 與視窗頂部的間距 */
+  right: 2vw; /* 與視窗右側的間距 */
+}
+
+.nav-right .nav-image {
+  width: 20vw; /* 圖片寬度設為視窗寬度的 x% */
+  height: auto; /* 自動調整高度比例 */
+  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
+  max-height: 250px; /* 設定最大高度，保持比例 */
+  object-fit: contain; /* 確保圖片完整顯示 */
+}
+
+.right-vol {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 11vh; /* 與視窗頂部的間距 */
+  right: 2.5vw; /* 與視窗右側的間距 */
+}
+
+.right-vol .volume_icon {
+  margin-right: 10px;
+  max-width: 22px;
+  height: auto;
+}
+.right-vol .arrow_icon {
+  max-width: 20px;
+  height: auto;
+}
+
+.deco-text {
+  text-align: right; /* 文字置右 */
+  font-size: 12px; /* 文字大小 */
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 306px; /* 與視窗頂部的間距 */
+  right: 2vw; /* 與視窗右側的間距 */
+}
+
+.logo {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  bottom: 4vh; /* 與視窗頂部的間距 */
+  right: 2vw; /* 與視窗右側的間距 */
+  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
+  max-height: 250px; /* 設定最大高度，保持比例 */
+}
+
+.radio-model {
+  position: absolute;
+  top: 10;
+  left: 10;
+  clip-path: inset(30px 170px 40px 170px); /* 圓形裁切 */
+  object-fit: cover; /* 確保圖片適應容器 */
+  z-index: -1; /* 將圖片放到最底層 */
+}
+
+.album-container {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  position: absolute;
+  top: 2vh;
+  left: -150px;
+  gap: 20px; /* 每張專輯間隔 */
+  max-width: 400px; /* 控制寬度 */
+}
+
+/* 每張專輯 */
+.album {
+  display: flex; /* 水平排列圖片和文字 */
+  align-items: center;
+  gap: 15px; /* 圖片與文字間隔 */
+  transition: transform 0.3s ease, opacity 0.7s ease;
+}
+
+.album-cover {
+  width: 225px;
+  height: 225px;
+  object-fit: cover; /* 保持圖片比例並填滿 */
+  border: #000000 solid 3;
+  border-radius: 15px; /* 圓角效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 增加陰影效果 */
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.album-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000; /* 黑色文字 */
+  line-height: 1.4;
+}
+
+.album-year {
+  font-size: 14px;
+  color: #555; /* 深灰色 */
+  margin: 5px 0;
+}
+
+.album-artist {
+  font-size: 14px;
+  color: #333; /* 深灰偏黑 */
+}
+
+.album:hover {
+  transform: translateX(100px); /* 從下方滑出 */
+  opacity: 1;
+}
