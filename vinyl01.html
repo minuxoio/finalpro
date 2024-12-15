@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TuneLab - Boombox</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="css/songs.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- 右側信息 -->
+    <div class="nav-right">
+      <img src="images/cornerLabel.svg" class="nav-image" />
+    </div>
+    <div class="right-vol">
+      <!--border為邊框，cellpadding為圖片和表格的間距，cellspacing是邊框的間距-->
+      <table class="volume">
+        <tbody>
+          <tr>
+            <td><img src="images/icon_volume.svg" class="volume_icon" /></td>
+            <td><img src="images/icon_arrow.svg" class="arrow_icon" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="typewriter" class="typewriter-text">
+      <div class="deco-text">
+        <h4>
+          Drag to Rotate<br />
+          點選紅色按鈕播放歌曲
+        </h4>
+        <p>
+          vinyl-834832<br />
+          MFG.D 2024'12<br /><br />
+          1920s-30s<br /><br />
+          [fjs;ldfkh]<br /><br /><br /><br />
+          ⬊⬊⬊⬊
+        </p>
+      </div>
+    </div>
+
+    <div class="logo" alt="Logo Placeholder">
+      <a href="index.html"><img src="images/title.webp" /></a>
+    </div>
+
+    <!-- 中間模型 -->
+    <div class="model-container">
+      <div class="radio-model">
+        <spline-viewer
+          url="https://prod.spline.design/jG4K7ngzycScV1yh/scene.splinecode"
+        ></spline-viewer>
+      </div>
+    </div>
+
+    <!-- 左側專輯+資訊 -->
+    <div class="album-container">
+      <!-- 專輯 -->
+      <div class="album">
+        <img
+          src="./images/westendblues_cover.jpg"
+          alt="West End Blues"
+          class="album-cover"
+        />
+
+        <div class="album-info">
+          <p class="info">info</p>
+          <h2 class="album-title">WEST END BLUES</h2>
+          <p class="album-artist">Louis Armstrong & His Hot Five</p>
+          <p class="album-year">1928</p>
+          <a href="floopy disk.html" target="_blank" class="receive-disk"
+            ><img src="./images/play_button.png" /> 領取你的專屬磁片</a
+          >
+          <p class="info-text">
+            Louis Armstrong & His Hot Five是Louis
+            Armstrong第一支以自己的名字領導的爵士樂團。<br />
+            這是一支典型的紐奧良爵士樂隊，其樂器包括小號、單簧管和長號，並有節奏組伴奏。最初的紐奧良爵士風格嚴重依賴集體即興創作，由三個法國號共同主奏，小號演奏主旋律，單簧管和長號即興伴奏旋律。<br />
+            這項傳統在這支樂隊中得到了延續，但由於Armstrong作為小號演奏家得天獨厚的創造性，樂曲中由小號獨奏的段落開始更頻繁地出現。在這些獨奏中，Armstrong奠定了爵士樂即興創作的基本詞彙，並成為其創始人和最有影響力的倡導者。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
