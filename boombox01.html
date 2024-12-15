@@ -10,17 +10,16 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/songs.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-
     <script
       type="module"
-      src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
     ></script>
   </head>
 
@@ -44,7 +43,7 @@
       <div class="deco-text">
         <h4>
           Drag to Rotate<br />
-          Click On to See What's Fun
+          點選紅色按鈕播放歌曲
         </h4>
         <p>
           boombox-489837<br />
@@ -57,21 +56,21 @@
     </div>
 
     <div class="logo" alt="Logo Placeholder">
-      <img src="images/title.webp" width="150px" />
+      <a href="index.html"><img src="images/title.webp" /></a>
     </div>
 
     <!-- 中間模型 -->
     <div class="model-container">
       <div class="radio-model">
         <spline-viewer
-          url="https://prod.spline.design/1WqTqf6vM1MoH8i6/scene.splinecode"
+          url="https://prod.spline.design/Qn2DGUxVVozQLB-t/scene.splinecode"
         ></spline-viewer>
       </div>
     </div>
 
-    <!-- 左側專輯 -->
+    <!-- 左側專輯+資訊 -->
     <div class="album-container">
-      <!-- 第一張專輯 -->
+      <!-- 專輯 -->
       <div class="album">
         <img
           src="./images/cantaloupeisland_cover.jpg"
@@ -80,47 +79,23 @@
         />
 
         <div class="album-info">
+          <p class="info">info</p>
           <h2 class="album-title">CANTALOUPE ISLAND</h2>
-          <p class="album-year">1964</p>
           <p class="album-artist">Herbie Hancock</p>
-          <a href="./" target="_blank" class="play-button"
-            ><img src="./images/play_button.png" /> 播放</a
+          <p class="album-year">1964</p>
+          <a href="floopy disk.html" target="_blank" class="receive-disk"
+            ><img src="./images/play_button.png" /> 領取你的專屬磁片</a
           >
-        </div>
-      </div>
-
-      <!-- 第二張專輯 -->
-      <div class="album">
-        <img src="./images/spain_cover.jpg" alt="Spain" class="album-cover" />
-
-        <div class="album-info">
-          <h2 class="album-title">SPAIN</h2>
-          <p class="album-year">1973</p>
-          <p class="album-artist">Chick Corea</p>
-          <a href="#" target="_blank" class="play-button"
-            ><img src="./images/play_button.png" /> 播放</a
-          >
-        </div>
-      </div>
-
-      <!-- 第三張專輯 -->
-      <div class="album">
-        <img
-          src="./images/myfoolishheart_cover.jpeg"
-          alt="My Foolish Heart"
-          class="album-cover"
-        />
-
-        <div class="album-info">
-          <h2 class="album-title">MY FOOLISH HEART</h2>
-          <p class="album-year">1962</p>
-          <p class="album-artist">Bill Evans Trio</p>
-          <a href="#" target="_blank" class="play-button"
-            ><img src="./images/play_button.png" /> 播放</a
-          >
+          <p class="info-text">
+            Herbert Jeffrey
+            Hancock（1940年4月12日生）是美國爵士音樂家、樂隊指揮和作曲家。Hancock在小號手Donald
+            Byrd的樂隊中開始了他的職業生涯。<br />
+            此後不久，他加入了Miles Davis
+            Quintet五重奏，在那裡他幫助重新定義了爵士節奏組的角色，並且是後波普音樂的先驅者之一。在20世紀70年代，Hancock使用各種合成器和電子設備嘗試了爵士融合、放克和電子風格。正是在這一時期，他發行了他最著名和最有影響力的專輯之一《Head
+            Hunters》。
+          </p>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
