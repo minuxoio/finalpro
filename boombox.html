@@ -17,10 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-
     <script
       type="module"
-      src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
     ></script>
   </head>
 
@@ -49,15 +48,17 @@
         <p>
           boombox-489837<br />
           MFG.D 2024'12<br /><br />
-          1960s-70s<br /><br />
+          1970s-80s<br /><br />
           [fjs;ldfkh]<br /><br /><br /><br />
           ⬊⬊⬊⬊
         </p>
       </div>
     </div>
 
-    <div class="logo" alt="Logo Placeholder">
-      <img src="images/title.webp" width="150px" />
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/title.webp" />
+      </a>
     </div>
 
     <!-- 中間模型 -->
@@ -83,7 +84,7 @@
           <h2 class="album-title">CANTALOUPE ISLAND</h2>
           <p class="album-year">1964</p>
           <p class="album-artist">Herbie Hancock</p>
-          <a href="./" target="_blank" class="play-button"
+          <a href="boombox01.html" target="_blank" class="play-button"
             ><img src="./images/play_button.png" /> 播放</a
           >
         </div>
@@ -97,7 +98,7 @@
           <h2 class="album-title">SPAIN</h2>
           <p class="album-year">1973</p>
           <p class="album-artist">Chick Corea</p>
-          <a href="#" target="_blank" class="play-button"
+          <a href="boombox02.html" target="_blank" class="play-button"
             ><img src="./images/play_button.png" /> 播放</a
           >
         </div>
@@ -115,12 +116,31 @@
           <h2 class="album-title">MY FOOLISH HEART</h2>
           <p class="album-year">1962</p>
           <p class="album-artist">Bill Evans Trio</p>
-          <a href="#" target="_blank" class="play-button"
+          <a href="boombox03.html" target="_blank" class="play-button"
             ><img src="./images/play_button.png" /> 播放</a
           >
         </div>
       </div>
     </div>
-    <script <script src="script.js"></script>
+
+    <audio id="bgm" loop>
+      <source src="mp3/titlebgm.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+      const bgm = document.getElementById("bgm");
+      const savedTime = localStorage.getItem("bgmTime");
+
+      if (savedTime) {
+        bgm.currentTime = parseFloat(savedTime);
+      }
+
+      bgm.play();
+
+      // 定時儲存當前播放時間
+      setInterval(() => {
+        localStorage.setItem("bgmTime", bgm.currentTime);
+      }, 1000);
+    </script>
   </body>
 </html>
