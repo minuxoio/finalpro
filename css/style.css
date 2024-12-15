@@ -38,8 +38,8 @@ header.navigation {
 
 /* 左側導航樣式 */
 .runborder {
-  margin-top: 3vh; /* 與視窗頂部的間距 */
-  margin-left: 2vw; /* 與視窗右側的間距 */
+  margin-top: 4vh; /* 與視窗頂部的間距 */
+  margin-left: 2.5vw; /* 與視窗右側的間距 */
 }
 
 .runborder .marquee-container {
@@ -106,16 +106,11 @@ header.navigation {
 }
 
 .nav-left {
-  display: flex; /* 設定橫向排列 */
-  gap: 1vw; /* 圖示之間的間距 */
-  top: 3vh; /* 與視窗頂部的間距 */
-  left: 2vw; /* 與視窗左側的間距 */
-}
-
-.nav-left .icon {
-  width: 4vw; /* 圖示的寬度 */
-  height: 4vw; /* 圖示的高度，與寬度相同呈正方形 */
-  background-color: #00000000; /* 示例背景色，可替換為圖標 */
+  position: absolute;
+  margin-top: 2.5vh; /* 與視窗頂部的間距 */
+  margin-left: 2.5vw; /* 與視窗右側的間距 */
+  font-size: 11px;
+  font-weight: 500;
 }
 
 /* 中間標題樣式 */
@@ -200,4 +195,48 @@ span.tc_space {
 .right-vol .arrow_icon {
   max-width: 20px;
   height: auto;
+}
+
+/* 容器樣式 */
+.player-menu {
+  display: flex;
+  justify-content: center; /* 主軸居中 */
+  align-items: center; /* 交叉軸居中 */
+  width: 90vw;
+  height: 10vh; /* 設定高度 */
+  position: relative; /* 定位父容器 */
+  gap: 0; /* 圖片之間間距 */
+  scale: 0.8;
+  top: 15vh;
+  left: 10vw;
+}
+
+/* 每個播放器樣式 */
+.player-item {
+  flex: 0 0 20%; /* 總寬度的 12% */
+  transition: transform 0.5s ease, opacity 0.3s ease; /* 平滑過渡 */
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1; /* 初始 z-index */
+}
+
+.player-item img {
+  width: 80%;
+  height: auto;
+  object-fit: contain; /* 圖片自適應 */
+  transition: transform 0.3s ease; /* hover 過渡效果 */
+  transform-origin: center center; /* 讓圖片從中心放大 */
+}
+
+/* Hover 效果：微小放大 */
+.player-item:hover img {
+  transform: scale(1.1);
+}
+
+/* 選中項目樣式：放大且保持居中 */
+.player-item.active {
+  transform: scale(1.5); /* 放大 */
+  z-index: 10; /* 提升 z-index */
+  opacity: 1; /* 完全顯示 */
 }
