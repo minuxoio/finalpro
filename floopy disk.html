@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Barcode & Time</title>
+    <link rel="stylesheet" href="css/floopy.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <div class="disk-drive" id="disk-drive">
+        <!-- 磁碟機 -->
+        <img src="./images/disk_1.svg" alt="Disk Drive" />
+        <!-- 動態磁片 -->
+        <div class="disk" id="disk-image"></div>
+      </div>
+      
+    <!-- 包裹內容的固定大小容器 -->
+    <div class="container">
+      <!-- 3D Viewer 的容器 -->
+      <div class="spline-wrapper">
+        <spline-viewer
+          url="https://prod.spline.design/f2S0T7pxGcONM9fT/scene.splinecode"
+        ></spline-viewer>
+      </div>
+      <!-- 條碼與文字 -->
+      <div class="barcode-container">
+        <div class="barcode"></div>
+        <div class="barcode-text">Vis. 000000</div>
+      </div>
+
+      <!-- 動態時間顯示 -->
+      <div id="time-display">00:00:00</div>
+
+      <!-- 磁片與下載按鈕 -->
+      <div class="disk-drive">
+        <img
+          src="./images/disk_1.svg"
+          alt="Disk Drive Placeholder"
+          id="disk-drive"
+        />
+      </div>
+      <div class="disk" id="disk-image"></div>
+      <div class="download-button" onclick="downloadDiskImage()">
+        即刻下載你的專屬磁片
+      </div>
+
+      <!-- 底部版權資訊 -->
+      <div class="bottom-left">
+        <img src="./images/X (1).png" alt="Cross Placeholder" />
+        <p>
+          (P)&(C)2024 TL Entertainment 2024.12.<br />
+          Distributed by NTUA VCD,<br />
+          INC. TAIWAN Warning: All rights<br />
+          reserved. Unauthorized<br />
+          duplication & rent is<br />
+          prohibited.<br />
+          Printed in Taiwan, Tune Lab
+        </p>
+      </div>
+      <!-- 右部版權資訊 -->
+      <div class="text-right">
+        <p>
+          mouse click to print<br />
+          <br />
+          -<br />
+          MFG.D 2024’12<br />
+          blahblahblah<br />
+          <br />
+          <br />
+          [fjs;ldfkh]<br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          ⬊⬊⬊⬊
+        </p>
+      </div>
+      <!-- 右下角標誌 -->
+      <div class="logo">
+        <img
+          src="./images/title.webp"
+          alt="Logo Placeholder"
+          width="260"
+          height="auto"
+        />
+      </div>
+    </div>
+    <!-- 左側導航 -->
+
+    <div class="runborder">
+      <div class="marquee-container">
+        <div class="marquee-content">tunelab.com - find your own TUNE</div>
+        <div class="marquee-content2">tunelab.com - find your own TUNE</div>
+        <div class="marquee-content3">tunelab.com - find your own TUNE</div>
+      </div>
+    </div>
+    <!-- 右側信息 -->
+    <div class="nav-right">
+      <img src="images/cornerLabel.svg" class="nav-image" />
+    </div>
+    <div class="right-vol">
+      <!--border為邊框，cellpadding為圖片和表格的間距，cellspacing是邊框的間距-->
+      <table class="volume">
+        <tbody>
+          <tr>
+            <td><img src="images/icon_volume.svg" class="volume_icon" /></td>
+            <td><img src="images/icon_arrow.svg" class="arrow_icon" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="nav-left"></div>
+
+    <div class="title">
+        <p>
+          << Click The Disc Drive >> <br />
+          <<<span class="tc_space"> 點擊此磁碟機 </span>>>
+        </p>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
