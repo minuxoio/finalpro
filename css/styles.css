@@ -3,7 +3,7 @@ body {
       /* 英文字型優先順序 */ "Roboto Mono", "Helvetica", "Arial",
     /* 中文字型優先順序 */ "Roboto Mono", "Noto Sans CJK TC", "PingFang TC",
     "Microsoft JhengHei", /* 後備字型 */ sans-serif;
-  background-color: #a8a8a8;
+  background-color: #f9f9f9;
   /* <uniquifier>: Use a unique and descriptive class name*/
   /*<weight>: Use a value from 100 to 700*/
 
