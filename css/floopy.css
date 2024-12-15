@@ -225,23 +225,59 @@ body {
   animation: breathing 5s infinite; /* 保留動畫 */
 }
 
-span.tc_space {
-  letter-spacing: 10px; /* 保持字間距 */
+/* 浮動文字樣式 */
+.floating-text {
+  position: absolute;
+  top: 55%; /* 根據需要微調位置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  font-size: 18px;
+  animation: breathing 5s infinite; /* 呼吸動畫 */
 }
+
+span.tc_space {
+  letter-spacing: 10px; /* 字距調整 */
+}
+
+/* 呼吸效果動畫 */
 @keyframes breathing {
   0% {
-    opacity: 1; /* 完全可見 */
-  }
-  25% {
-    opacity: 0; /* 完全隱藏 */
+    opacity: 1;
   }
   50% {
-    opacity: 1; /* 再次可見 */
-  }
-  75% {
-    opacity: 0; /* 再次隱藏 */
+    opacity: 0.5;
   }
   100% {
-    opacity: 1; /* 回到完全可見 */
+    opacity: 1;
   }
+}
+
+/* 磁片樣式 */
+.disk {
+  position: absolute;
+  top: 60%; /* 磁片起始位置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0; /* 初始隱藏 */
+  transition: opacity 1s ease;
+}
+
+/* 下載按鈕樣式 */
+.download-button {
+  display: none; /* 初始隱藏 */
+  position: absolute;
+  top: 70%; /* 根據需求調整位置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 }
