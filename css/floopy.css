@@ -1,5 +1,6 @@
 body {
-  font-family: "Roboto Mono", "Noto Sans CJK TC", "PingFang TC", sans-serif;
+  font-family: "Roboto Mono", "Noto Sans CJK TC";
+
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
@@ -96,8 +97,9 @@ body {
 
 .logo {
   position: absolute;
-  margin-top: 78vh; /* 與視窗頂部的間距 */
-  margin-left: 76vw; /* 與視窗右側的間距 */
+
+  margin-top: 82vh; /* 與視窗頂部的間距 */
+  margin-left: 80.5vw; /* 與視窗右側的間距 */
 }
 /* 左側導航樣式 */
 .runborder {
@@ -203,13 +205,45 @@ body {
 .spline-wrapper {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
   top: 0; /* 距離頂部 0px */
+
   left: 50%; /* 水平居中 */
   transform: translateX(-50%); /* 水平居中對齊 */
   width: 1500px; /* 固定寬度，可按需修改 */
   height: 400px; /* 固定高度，可按需修改 */
+
   z-index: 0; /* 背景層，可根據需求調整 */
   border: none; /* 如果需要外框，可設置邊框樣式 */
 
   overflow: hidden; /* 確保內部內容不會超出範圍 */
   z-index: 0; /* 背景層，可根據需求調整 */
+}
+.title {
+  position: absolute;
+  top: 55%; /* 往下移動，原本是 50%，現在調整為 55% */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  animation: breathing 5s infinite; /* 保留動畫 */
+}
+
+span.tc_space {
+  letter-spacing: 10px; /* 保持字間距 */
+}
+@keyframes breathing {
+  0% {
+    opacity: 1; /* 完全可見 */
+  }
+  25% {
+    opacity: 0; /* 完全隱藏 */
+  }
+  50% {
+    opacity: 1; /* 再次可見 */
+  }
+  75% {
+    opacity: 0; /* 再次隱藏 */
+  }
+  100% {
+    opacity: 1; /* 回到完全可見 */
+  }
 }
