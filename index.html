@@ -14,28 +14,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <!-- 左側導航 -->
+    <!-- 左側跑馬燈 -->
+    <div class="runborder">
+      <div class="marquee-container">
+        <div class="marquee-content">tunelab.com - find your own TUNE</div>
+        <div class="marquee-content2">tunelab.com - find your own TUNE</div>
+        <div class="marquee-content3">tunelab.com - find your own TUNE</div>
+      </div>
+    </div>
+    <!-- 左側文字 -->
     <div class="nav-left">
-      <div class="icon icon-back"><img src="images/point.svg" /></div>
-      <div class="icon icon-menu"><img src="images/sound.svg" /></div>
+        <p>
+          (P)&(C)2024 TL Entertainment 2024.12.<br />
+          Distributed by NTUA VCD,<br />
+          INC. TAIWAN Warning: All rights<br />
+          reserved. Unauthorized<br />
+          duplication & rent is<br />
+          prohibited.<br />
+          Printed in Taiwan, Tune Lab
+        </p>
+      </div>
     </div>
 
     <!-- 中間標題 -->
     <div class="nav-center">
       <div class="logo">
-        <img src="images/title.png" alt="TuneLab Logo" />
+        <img src="images/title.webp" />
       </div>
-      <h1 class="title">Select Your Audio Player</h1>
+      <div class="title">
+        <p>
+          << Select Your Audio Player >> <br />
+          <<<span class="tc_space"> 選擇你的播放器 </span>>>
+        </p>
+      </div>
     </div>
 
     <!-- 右側信息 -->
     <div class="nav-right">
-      <img src="images/cornerLabel.svg" />
+      <img src="images/cornerLabel.svg" class="nav-image" />
     </div>
+    <div class="right-vol">
+      <!--border為邊框，cellpadding為圖片和表格的間距，cellspacing是邊框的間距-->
+      <table class="volume">
+        <tbody>
+          <tr>
+            <td><img src="images/icon_volume.svg" class="volume_icon" /></td>
+            <td><img src="images/icon_arrow.svg" class="arrow_icon" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 旋轉式選單容器 -->
+    <div class="player-menu">
+      <div class="player-item" data-href="player1.html">
+        <img src="images/player1.webp" />
+      </div>
+      <div class="player-item" data-href="player2.html">
+        <img src="images/player2.webp" />
+      </div>
+      <div class="player-item" data-href="player3.html">
+        <img src="images/player3.webp" />
+      </div>
+      <div class="player-item" data-href="player4.html">
+        <img src="images/player4.webp" />
+      </div>
+      <div class="player-item" data-href="player5.html">
+        <img src="images/player5.webp" />
+      </div>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,249 @@
+body {
+  font-family: "Roboto Mono", "Noto Sans CJK TC";
+
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.barcode-container {
+  position: absolute;
+  margin-top: 8.5vh; /* 與視窗頂部的間距 */
+  margin-left: -4vw; /* 與視窗右側的間距 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-90deg); /* 整個條碼區域旋轉 */
+}
+
+.barcode {
+  display: flex;
+  height: 150px;
+  align-items: flex-end;
+}
+
+.barcode div {
+  background-color: black;
+  margin: 0 1px;
+}
+
+.barcode-text {
+  font-size: 18px;
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+#time-display {
+  position: absolute;
+  top: 2.5vh; /* 與視窗頂部的間距 */
+  left: 16vw; /* 與視窗右側的間距 */
+  font-size: 30px;
+}
+
+.disk-drive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.disk {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: url("/images/disk_1.svg") no-repeat center/contain;
+  transform: translate(-50%, -50%) translateY(-100px);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.download-button {
+  display: none;
+  position: absolute;
+  top: calc(50% + 150px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bottom-left {
+  position: absolute;
+  margin-top: 55vh; /* 與視窗頂部的間距 */
+  margin-left: 2vw; /* 與視窗右側的間距 */
+  font-size: 11px;
+}
+
+.text-right {
+  position: absolute;
+  margin-top: 30vh; /* 與視窗頂部的間距 */
+  margin-left: 89vw; /* 與視窗右側的間距 */
+  font-size: 11px;
+  text-align: right;
+}
+
+.logo {
+  position: absolute;
+
+  margin-top: 82vh; /* 與視窗頂部的間距 */
+  margin-left: 80.5vw; /* 與視窗右側的間距 */
+}
+/* 左側導航樣式 */
+.runborder {
+  position: absolute; /* 使用絕對定位，脫離文檔流 */
+  top: 93.5%; /* 距離頂部 10% */
+  left: 2vw; /* 距離左側 2vw */
+  width: 10vw;
+}
+
+.runborder .marquee-container {
+  width: 10vw;
+  overflow: hidden;
+  display: flex;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  font-size: 12px;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.marquee-content2 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee2 10s linear infinite;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.marquee-content3 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee2 10s linear infinite;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* 右側導航樣式 */
+.nav-right {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 4vh; /* 與視窗頂部的間距 */
+  right: 2vw; /* 與視窗右側的間距 */
+}
+
+.nav-right .nav-image {
+  width: 20vw; /* 圖片寬度設為視窗寬度的 x% */
+  height: auto; /* 自動調整高度比例 */
+  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
+  max-height: 250px; /* 設定最大高度，保持比例 */
+  object-fit: contain; /* 確保圖片完整顯示 */
+}
+
+.right-vol {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 11vh; /* 與視窗頂部的間距 */
+  right: 2.5vw; /* 與視窗右側的間距 */
+}
+
+.right-vol .volume_icon {
+  margin-right: 10px;
+  max-width: 22px;
+  height: auto;
+}
+.right-vol .arrow_icon {
+  max-width: 20px;
+  height: auto;
+}
+/* Spline Viewer 定位與大小設置 */
+.spline-wrapper {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 0; /* 距離頂部 0px */
+
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%); /* 水平居中對齊 */
+  width: 1500px; /* 固定寬度，可按需修改 */
+  height: 400px; /* 固定高度，可按需修改 */
+
+  z-index: 0; /* 背景層，可根據需求調整 */
+  border: none; /* 如果需要外框，可設置邊框樣式 */
+
+  overflow: hidden; /* 確保內部內容不會超出範圍 */
+  z-index: 0; /* 背景層，可根據需求調整 */
+}
+.title {
+  position: absolute;
+  top: 55%; /* 往下移動，原本是 50%，現在調整為 55% */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  animation: breathing 5s infinite; /* 保留動畫 */
+}
+
+span.tc_space {
+  letter-spacing: 10px; /* 保持字間距 */
+}
+@keyframes breathing {
+  0% {
+    opacity: 1; /* 完全可見 */
+  }
+  25% {
+    opacity: 0; /* 完全隱藏 */
+  }
+  50% {
+    opacity: 1; /* 再次可見 */
+  }
+  75% {
+    opacity: 0; /* 再次隱藏 */
+  }
+  100% {
+    opacity: 1; /* 回到完全可見 */
+  }
+}
