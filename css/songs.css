@@ -87,8 +87,12 @@ body {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
   bottom: 4vh; /* 與視窗底部的間距 */
   right: 2vw; /* 與視窗右側的間距 */
-  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
-  max-height: 250px; /* 設定最大高度，保持比例 */
+}
+
+.logo img {
+  width: 150px; /* 讓圖片填滿容器的寬度 */
+  max-width: none; /* 防止圖片過度縮放 */
+  height: auto; /* 保持圖片的比例 */
 }
 
 /* 中間模型樣式 */
@@ -99,8 +103,8 @@ body {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  top: 0px;
-  left: 150px;
+  top: 0vh;
+  left: 10vw;
   /*clip-path: inset(30px 170px 40px 170px); */
   object-fit: cover; /* 確保圖片適應容器 */
   z-index: -1; /* 將圖片放到最底層 */
@@ -113,9 +117,8 @@ body {
   display: flex;
   flex-direction: column; /* 垂直排列 */
   position: absolute;
-  top: 4vh;
+  top: 10vh;
   left: 5vw;
-  gap: 28px; /* 每張專輯間隔 */
   max-width: 330px; /* 控制寬度 */
 }
 
@@ -123,7 +126,7 @@ body {
   display: flex; /* 水平排列圖片和文字 */
   flex-direction: column;
   align-items: flex-start; /* 對齊容器頂部 */
-  gap: 20px; /* 圖片與文字間隔 */
+  gap: 40px; /* 圖片與文字間隔 */
   transition: transform 0.3s ease, opacity 0.7s ease;
 }
 
@@ -134,21 +137,39 @@ body {
   /*padding: 12px;*/
   border: #000000 solid px;
   border-radius: 20px; /* 圓角效果 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
 }
 
 .album-info {
+  position: relative;
   background-image: url(../images/album_info.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 460px; /* 固定寬度 */
-  height: 460px;
+  height: 300px;
   max-width: 100%; /* 在視口較小時仍能保持響應式效果 */
   box-sizing: border-box; /* 包含 padding 和 border 在寬度內 */
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 5px;
   padding: 10px 0px 0px 20px;
+}
+
+.info-text {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  padding: 0 20px;
+  border-radius: 22px;
+  background-color: #cbcbcb;
+  width: 460px; /* 固定寬度 */
+  height: 180px;
+  max-width: 100%; /* 在視口較小時仍能保持響應式效果 */
+  box-sizing: border-box; /* 包含 padding 和 border 在寬度內 */
+  overflow-y: auto; /* 垂直捲動 */
+  overflow-x: hidden; /* 隱藏水平捲動 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .album-title {
@@ -180,7 +201,7 @@ body {
   margin-top: auto;
   text-decoration: none;
   color: #5e5e5e;
-  margin-top: 10px;
+  margin-top: 55px;
   transition: color 0.1s ease;
 }
 
@@ -203,7 +224,7 @@ a {
   color: black;
 }
 
-a::after {
+.album-info a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -215,22 +236,18 @@ a::after {
   transform: translateY(5px);
 }
 
-a img {
+.album-info a img {
   width: 10%;
   margin-left: 3px;
   margin-bottom: 4px;
 }
 
-scroll-container {
-  width: 290px; /* 設置容器寬度 */
-  height: 200px; /* 設置容器高度 */
-  border: 1px solid #403737;
-  overflow-y: auto; /* 垂直捲動 */
-  overflow-x: hidden; /* 隱藏水平捲動 */
-}
-
 .album-info a:hover {
   color: #b4422b;
+}
+
+.album:hover .info-text {
+  opacity: 1;
 }
 
 @keyframes typing {
