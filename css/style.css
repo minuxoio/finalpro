@@ -40,8 +40,8 @@ header.navigation {
 
 .nav-left {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  top: 10vh; /* 與視窗頂部的間距 */
-  right: 90vw; /* 與視窗右側的間距 */
+  top: 8vh; /* 與視窗頂部的間距 */
+  right: 82vw; /* 與視窗右側的間距 */
 }
 
 .nav-left .left-image {
@@ -135,7 +135,7 @@ header.navigation {
   flex-direction: column; /* 垂直排列 */
   align-items: center; /* 元素居中對齊 */
   justify-content: center; /* 垂直方向居中 */
-  top: 4vh;
+  margin-top: -5vh;
 }
 
 .nav-center .logo img {
@@ -153,7 +153,7 @@ header.navigation {
   font-size: 18px; /* 標題字體大小基於視窗高度 */
   font-weight: 450;
   line-height: 35px;
-  margin-top: 20px; /* 額外距離 */
+  margin-top: 30px; /* 額外距離 */
   animation: breathing 5s infinite; /* 呼吸動畫：x秒循環 */
 }
 
