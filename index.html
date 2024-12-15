@@ -30,16 +30,15 @@
     </div>
     <!-- 左側文字 -->
     <div class="nav-left">
-        <p>
-          (P)&(C)2024 TL Entertainment 2024.12.<br />
-          Distributed by NTUA VCD,<br />
-          INC. TAIWAN Warning: All rights<br />
-          reserved. Unauthorized<br />
-          duplication & rent is<br />
-          prohibited.<br />
-          Printed in Taiwan, Tune Lab
-        </p>
-      </div>
+      <p>
+        (P)&(C)2024 TL Entertainment 2024.12.<br />
+        Distributed by NTUA VCD,<br />
+        INC. TAIWAN Warning: All rights<br />
+        reserved. Unauthorized<br />
+        duplication & rent is<br />
+        prohibited.<br />
+        Printed in Taiwan, Tune Lab
+      </p>
     </div>
 
     <!-- 中間標題 -->
@@ -64,7 +63,9 @@
       <table class="volume">
         <tbody>
           <tr>
-            <td><img src="images/icon_volume.svg" class="volume_icon" /></td>
+            <td>
+              <img src="images/icon_volume.svg" class="volume_icon" />
+            </td>
             <td><img src="images/icon_arrow.svg" class="arrow_icon" /></td>
           </tr>
         </tbody>
@@ -89,6 +90,16 @@
         <img src="images/player5.webp" />
       </div>
     </div>
+    <!-- loading動畫 -->
+    <div id="loading">
+      <div class="loadingword">Loading...</div>
+    </div>
+
+    <!-- 音樂元素 -->
+    <audio id="bgm" loop>
+      <source src="mp3/titlebgm.mp3" type="audio/mp3" />
+    </audio>
+
     <script src="js/main.js"></script>
   </body>
 </html>

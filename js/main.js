@@ -42,3 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const bgm = document.getElementById("bgm");
+
+  // 點擊整個網頁播放音樂
+  document.body.addEventListener("click", function () {
+    if (bgm.paused) {
+      bgm.play(); // 播放音樂
+    }
+  });
+});
