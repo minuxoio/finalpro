@@ -3,7 +3,7 @@ body {
       /* 英文字型優先順序 */ "Roboto Mono", "Helvetica", "Arial",
     /* 中文字型優先順序 */ "Roboto Mono", "Noto Sans CJK TC", "PingFang TC",
     "Microsoft JhengHei", /* 後備字型 */ sans-serif;
-  background-color: #c1c1c1;
+  background-color: #a8a8a8;
   /* <uniquifier>: Use a unique and descriptive class name*/
   /*<weight>: Use a value from 100 to 700*/
 
@@ -56,82 +56,166 @@ body {
 }
 
 .deco-text {
+  display: inline-block;
   text-align: right; /* 文字置右 */
-  font-size: 12px; /* 文字大小 */
+  font-size: 11px; /* 文字大小 */
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  top: 306px; /* 與視窗頂部的間距 */
+  top: 30vh; /* 與視窗頂部的間距 */
   right: 2vw; /* 與視窗右側的間距 */
 }
 
 .logo {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  bottom: 4vh; /* 與視窗頂部的間距 */
+  bottom: 4vh; /* 與視窗底部的間距 */
   right: 2vw; /* 與視窗右側的間距 */
   max-width: 250px; /* 設定最大寬度，避免圖片過大 */
   max-height: 250px; /* 設定最大高度，保持比例 */
 }
 
 .radio-model {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 100vh;
+  width: 100vw;
   position: absolute;
-  top: 10;
-  left: 10;
-  clip-path: inset(30px 170px 40px 170px); /* 圓形裁切 */
+  top: 0px;
+  left: 0px;
+  /*clip-path: inset(30px 170px 40px 170px); */
   object-fit: cover; /* 確保圖片適應容器 */
   z-index: -1; /* 將圖片放到最底層 */
+  overflow: hidden;
+  /*transform: translateX(-1400px); */
 }
 
 .album-container {
   display: flex;
   flex-direction: column; /* 垂直排列 */
   position: absolute;
-  top: 2vh;
+  top: 4vh;
   left: -150px;
-  gap: 20px; /* 每張專輯間隔 */
-  max-width: 400px; /* 控制寬度 */
+  gap: 28px; /* 每張專輯間隔 */
+  max-width: 460px; /* 控制寬度 */
 }
 
 /* 每張專輯 */
+
 .album {
   display: flex; /* 水平排列圖片和文字 */
-  align-items: center;
-  gap: 15px; /* 圖片與文字間隔 */
+  align-items: flex-start; /* 對齊容器頂部 */
+  gap: 20px; /* 圖片與文字間隔 */
   transition: transform 0.3s ease, opacity 0.7s ease;
 }
 
 .album-cover {
-  width: 225px;
-  height: 225px;
+  width: 250px;
+  height: 250px;
   object-fit: cover; /* 保持圖片比例並填滿 */
-  border: #000000 solid 3;
+  padding: 8px;
+  border: #000000 solid 1px;
   border-radius: 15px; /* 圓角效果 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 增加陰影效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
 }
 
 .album-info {
   display: flex;
+  width: 460px; /* 固定寬度 */
+  height: 235px;
+  max-width: 100%; /* 在視口較小時仍能保持響應式效果 */
+  box-sizing: border-box; /* 包含 padding 和 border 在寬度內 */
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 8px;
 }
 
 .album-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: medium;
   color: #000; /* 黑色文字 */
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .album-year {
   font-size: 14px;
-  color: #555; /* 深灰色 */
-  margin: 5px 0;
+  font-weight: medium;
+  color: #333333; /* 深灰偏黑 */
+  margin: 15px 0px 0px 0px;
 }
 
 .album-artist {
   font-size: 14px;
-  color: #333; /* 深灰偏黑 */
+  font-weight: medium;
+  color: #333333; /* 深灰偏黑 */
+}
+
+.play-button {
+  display: inline-block;
+  margin-top: auto;
+  text-decoration: none;
+  /*border-bottom: 2px solid rgb(0, 0, 0);
+  padding: 5px;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;*/
+  color: #000000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.7s ease;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 38%; /* 控制底線的長度 */
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.3s ease;
+  transform: translateY(5px);
+}
+
+a img {
+  width: 10%;
+  margin-left: 3px;
+  margin-bottom: 4px;
 }
 
 .album:hover {
-  transform: translateX(100px); /* 從下方滑出 */
+  transform: translateX(100px); /* 從左方滑出 */
   opacity: 1;
+}
+
+.album:hover a {
+  opacity: 1; /* 滑鼠 hover 時顯示按鈕 */
+  transform: translateX(0px);
+}
+
+.play-btn:hover {
+  background-color: #555; /* 按鈕 hover 效果 */
+}
+
+.deco-text p {
+  margin-inline: auto;
+  overflow: hidden;
+  /* Keeps on a single line */
+  white-space: nowrap;
+  /* The cursor */
+  /*border-right: 1px solid;
+  /* steps = number of characters */
+  animation: typing 1.5s steps(15) backwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }

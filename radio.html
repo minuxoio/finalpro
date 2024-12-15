@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+    ></script>
   </head>
 
   <body>
@@ -35,29 +39,26 @@
         </tbody>
       </table>
     </div>
-
-    <div class="deco-text">
-      <p>
-        drag to rotate<br /><br />
-        radio-489837<br />
-        MFG.D 2024’12<br /><br />
-        1960s-70s<br /><br />
-        [fjs;ldfkh]<br /><br /><br /><br />
-        ⬊⬊⬊⬊
-      </p>
+    <div id="typewriter" class="typewriter-text">
+      <div class="deco-text">
+        <p>
+          drag to rotate<br /><br />
+          radio-489837<br />
+          MFG.D 2024’12<br /><br />
+          1960s-70s<br /><br />
+          [fjs;ldfkh]<br /><br /><br /><br />
+          ⬊⬊⬊⬊
+        </p>
+      </div>
     </div>
 
-    <div class="logo">
+    <div class="logo" alt="Logo Placeholder">
       <img src="images/title.webp" width="150px" />
     </div>
 
     <!-- 中間模型 -->
     <div class="model-container">
       <div class="radio-model">
-        <script
-          type="module"
-          src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
-        ></script>
         <spline-viewer
           url="https://prod.spline.design/QbMv9HVthjpSGj6x/scene.splinecode"
         ></spline-viewer>
@@ -73,20 +74,28 @@
           alt="Cantaloupe Island"
           class="album-cover"
         />
+
         <div class="album-info">
           <h2 class="album-title">CANTALOUPE ISLAND</h2>
           <p class="album-year">1964</p>
           <p class="album-artist">Herbie Hancock</p>
+          <a href="#" target="_blank" class="play-button"
+            ><img src="./images/play_button.png" /> 播放</a
+          >
         </div>
       </div>
 
       <!-- 第二張專輯 -->
       <div class="album">
         <img src="./images/spain_cover.jpg" alt="Spain" class="album-cover" />
+
         <div class="album-info">
           <h2 class="album-title">SPAIN</h2>
           <p class="album-year">1973</p>
           <p class="album-artist">Chick Corea</p>
+          <a href="#" target="_blank" class="play-button"
+            ><img src="./images/play_button.png" /> 播放</a
+          >
         </div>
       </div>
 
@@ -97,12 +106,17 @@
           alt="My Foolish Heart"
           class="album-cover"
         />
+
         <div class="album-info">
           <h2 class="album-title">MY FOOLISH HEART</h2>
           <p class="album-year">1962</p>
           <p class="album-artist">Bill Evans Trio</p>
+          <a href="#" target="_blank" class="play-button"
+            ><img src="./images/play_button.png" /> 播放</a
+          >
         </div>
       </div>
     </div>
+    <script <script src="script.js"></script>
   </body>
 </html>
