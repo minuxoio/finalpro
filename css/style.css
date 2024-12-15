@@ -37,6 +37,21 @@ header.navigation {
 }
 
 /* 左側導航樣式 */
+
+.nav-left {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 10vh; /* 與視窗頂部的間距 */
+  right: 90vw; /* 與視窗右側的間距 */
+}
+
+.nav-left .left-image {
+  width: 10vw; /* 圖片寬度設為視窗寬度的 x% */
+  height: auto; /* 自動調整高度比例 */
+  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
+  max-height: 250px; /* 設定最大高度，保持比例 */
+  object-fit: contain; /* 確保圖片完整顯示 */
+}
+
 .runborder {
   margin-top: 4vh; /* 與視窗頂部的間距 */
   margin-left: 2.5vw; /* 與視窗右側的間距 */
@@ -49,7 +64,7 @@ header.navigation {
   border-radius: 25px;
   border-style: solid;
   border-color: black;
-  border-width: 2px;
+  border-width: 1.5px;
   font-size: 12px;
 }
 
