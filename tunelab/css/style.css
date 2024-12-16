@@ -1,0 +1,302 @@
+body {
+  font-family: 
+    /* 英文字型優先順序 */ "Roboto Mono", "Helvetica", "Arial",
+    /* 中文字型優先順序 */ "Roboto Mono", "Noto Sans CJK TC", "PingFang TC",
+    "Microsoft JhengHei", /* 後備字型 */ sans-serif;
+  background-color: #f9f9f9;
+  /* <uniquifier>: Use a unique and descriptive class name*/
+  /*<weight>: Use a value from 100 to 700*/
+
+  .roboto-mono-uniquifier {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  /* uniquifier>: Use a unique and descriptive class name*/
+  /*<weight>: Use a value from 100 to 900*/
+
+  .noto-sans-tc-uniquifier {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+}
+index {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header.navigation {
+  display: flex;
+  justify-content: space-between; /* 左中右區域 */
+  align-items: center; /* 垂直對齊 */
+  padding: 5vh 5vw; /* 外邊距以螢幕大小為基準 */
+}
+
+/* 左側導航樣式 */
+
+.nav-left {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 5vh; /* 與視窗頂部的間距 */
+  right: 90vw; /* 與視窗右側的間距 */
+}
+
+.nav-left .left-image {
+  width: 10vw; /* 圖片寬度設為視窗寬度的 x% */
+  height: auto; /* 自動調整高度比例 */
+  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
+  max-height: 250px; /* 設定最大高度，保持比例 */
+  object-fit: contain; /* 確保圖片完整顯示 */
+}
+
+.runborder {
+  margin-top: 4vh; /* 與視窗頂部的間距 */
+  margin-left: 2.5vw; /* 與視窗右側的間距 */
+}
+
+.runborder .marquee-container {
+  width: 10vw;
+  overflow: hidden;
+  display: flex;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1.5px;
+  font-size: 12px;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.marquee-content2 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee2 10s linear infinite;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.marquee-content3 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee2 10s linear infinite;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.nav-left {
+  position: absolute;
+  margin-top: 2.5vh; /* 與視窗頂部的間距 */
+  margin-left: 2.5vw; /* 與視窗右側的間距 */
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* 中間標題樣式 */
+.nav-center {
+  display: flex;
+  text-align: center;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 元素居中對齊 */
+  justify-content: center; /* 垂直方向居中 */
+  margin-top: -5vh;
+}
+
+.nav-center .logo img {
+  display: flex;
+  flex-direction: column; /* 確保垂直排列 */
+  align-items: center; /* 元素居中對齊 */
+  width: 35vw; /* Logo 寬度為視窗寬度的 20% */
+  height: auto; /* 自動高度 */
+  max-width: 700px; /* 最大寬度 */
+  min-width: 400px; /* 最小寬度 */
+  margin-top: 2.5vh;
+}
+
+.nav-center .title {
+  font-size: 18px; /* 標題字體大小基於視窗高度 */
+  font-weight: 450;
+  line-height: 35px;
+  margin-top: 30px; /* 額外距離 */
+  animation: breathing 5s infinite; /* 呼吸動畫：x秒循環 */
+}
+
+span.tc_space {
+  letter-spacing: 12px; /* 增加字距 */
+  font-weight: 480;
+}
+
+/* 呼吸效果動畫 */
+@keyframes breathing {
+  0% {
+    opacity: 1; /* 實色 */
+  }
+  25% {
+    opacity: 0; /* 實色 */
+  }
+  50% {
+    opacity: 1; /* 半透明 */
+  }
+  75% {
+    opacity: 0; /* 回到實色 */
+  }
+  100% {
+    opacity: 1; /* 回到實色 */
+  }
+}
+
+/* 右側導航樣式 */
+.nav-right {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 4vh; /* 與視窗頂部的間距 */
+  right: 2vw; /* 與視窗右側的間距 */
+}
+
+.nav-right .nav-image {
+  width: 20vw; /* 圖片寬度設為視窗寬度的 x% */
+  height: auto; /* 自動調整高度比例 */
+  max-width: 250px; /* 設定最大寬度，避免圖片過大 */
+  max-height: 250px; /* 設定最大高度，保持比例 */
+  object-fit: contain; /* 確保圖片完整顯示 */
+}
+
+.right-vol {
+  position: absolute; /* 使用絕對定位，控制在特定位置 */
+  top: 11vh; /* 與視窗頂部的間距 */
+  right: 2.5vw; /* 與視窗右側的間距 */
+}
+
+.right-vol .volume_icon {
+  margin-right: 10px;
+  max-width: 22px;
+  height: auto;
+}
+.right-vol .arrow_icon {
+  max-width: 20px;
+  height: auto;
+}
+
+/* 容器樣式 */
+.player-menu {
+  display: flex;
+  justify-content: center; /* 主軸居中 */
+  align-items: center; /* 交叉軸居中 */
+  width: 90vw;
+  height: 10vh; /* 設定高度 */
+  position: relative; /* 定位父容器 */
+  gap: 0; /* 圖片之間間距 */
+  scale: 0.8;
+  bottom: -25vh;
+  left: 10vw;
+}
+
+/* 每個播放器樣式 */
+.player-item {
+  flex: 0 0 20%; /* 總寬度的 12% */
+  transition: transform 0.5s ease, opacity 0.3s ease; /* 平滑過渡 */
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1; /* 初始 z-index */
+}
+
+.player-item img {
+  width: 80%;
+  height: auto;
+  object-fit: contain; /* 圖片自適應 */
+  transition: transform 0.3s ease; /* hover 過渡效果 */
+  transform-origin: center center; /* 讓圖片從中心放大 */
+}
+
+/* Hover 效果：微小放大 */
+.player-item:hover img {
+  transform: scale(1.1);
+}
+
+/* 選中項目樣式：放大且保持居中 */
+.player-item.active {
+  transform: scale(1.5); /* 放大 */
+  z-index: 10; /* 提升 z-index */
+  opacity: 1; /* 完全顯示 */
+}
+
+/* 打字機效果容器 */
+#loading {
+  /* 整個蓋住畫面的底色色塊 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(244, 244, 244, 0.9); /* 略微透明背景 */
+  z-index: 9999;
+  display: none; /* 預設隱藏 */
+  justify-content: center;
+  align-items: center;
+  display: flex; /* 使用 flex 來居中對齊 */
+  display: none; /* 預設隱藏 */
+}
+
+.loadingword {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap; /* 防止文字換行 */
+  overflow: hidden; /* 超出範圍的文字隱藏 */
+  border-right: 2px solid black; /* 模擬打字機游標 */
+  width: 0; /* 初始寬度為 0 */
+  animation: typing 3s steps(9, end) infinite, blink 0.7s step-end infinite; /* 重設打字效果 */
+  animation-fill-mode: forwards; /* 動畫結束後保留狀態 */
+}
+
+/* 打字動畫 */
+@keyframes typing {
+  from {
+    width: 0; /* 開始時寬度為 0 */
+  }
+  to {
+    width: 12ch; /* 顯示整段文字 */
+  }
+}
+
+/* 游標閃爍效果 */
+@keyframes blink {
+  50% {
+    border-color: transparent; /* 使游標隱藏 */
+  }
+}
