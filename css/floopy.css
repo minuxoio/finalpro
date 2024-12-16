@@ -56,30 +56,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.disk {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 200px;
-  background: url("/images/disk_1.svg") no-repeat center/contain;
-  transform: translate(-50%, -50%) translateY(-100px);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.download-button {
-  display: none;
-  position: absolute;
-  top: calc(50% + 150px);
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 16px;
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .bottom-left {
   position: absolute;
   margin-top: 55vh; /* 與視窗頂部的間距 */
@@ -225,7 +201,76 @@ body {
   animation: breathing 5s infinite; /* 保留動畫 */
 }
 
+/* 磁片樣式 */
+.disk {
+  position: absolute;
+  top: 42%; /* 磁片起始位置 */
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0; /* 初始隱藏 */
+}
+
+/* 下載按鈕樣式 */
+.download-button {
+  display: none; /* 初始隱藏 */
+  position: absolute;
+  top: 70.2%; /* 根據需求調整位置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* 磁片圖片初始樣式 */
+.disk {
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.15s ease, transform 0.02s ease;
+}
+
+.disk.show {
+  opacity: 1;
+  transform: scale(2.56);
+}
+
+/* 下載按鈕初始樣式 */
+.download-button {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.download-button.show {
+  display: block;
+  opacity: 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* 浮動文字樣式 */
+
+.floating-text {
+  opacity: 1; /* 初始可見 */
+  transition: opacity 0.5s ease; /* 平滑過渡效果 */
+}
+
+.floating-text.hidden {
+  animation: none; /* 停止動畫 */
+  opacity: 0; /* 透明 */
+  display: none; /* 移除元素 */
+}
 .floating-text {
   position: absolute;
   top: 55%; /* 根據需要微調位置 */
@@ -234,9 +279,7 @@ body {
   z-index: 10;
   text-align: center;
   font-size: 18px;
-  animation: breathing 5s infinite; /* 呼吸動畫 */
 }
-
 span.tc_space {
   letter-spacing: 10px; /* 字距調整 */
 }
@@ -252,32 +295,4 @@ span.tc_space {
   100% {
     opacity: 1;
   }
-}
-
-/* 磁片樣式 */
-.disk {
-  position: absolute;
-  top: 60%; /* 磁片起始位置 */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0; /* 初始隱藏 */
-  transition: opacity 1s ease;
-}
-
-/* 下載按鈕樣式 */
-.download-button {
-  display: none; /* 初始隱藏 */
-  position: absolute;
-  top: 70%; /* 根據需求調整位置 */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
 }
