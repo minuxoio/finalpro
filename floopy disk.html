@@ -109,14 +109,19 @@
         </tbody>
       </table>
     </div>
-    <div class="nav-left"></div>
-
-    <div class="title">
-        <p>
-          << Click The Disc Drive >> <br />
-          <<<span class="tc_space"> 點擊此磁碟機 </span>>>
-        </p>
-      </div>
+    <!-- 浮動提示文字 -->
+<div id="floating-text" class="floating-text">
+    << Click The Disc Drive >>
+    <br />
+    <<<span class="tc_space"> 點擊此磁碟機 </span>>>
+  </div>
+  
+  <!-- 新增磁片容器 -->
+  <div class="disk" id="disk-image"></div>
+  <div class="download-button" id="download-button" onclick="downloadDiskImage()">
+    即刻下載你的專屬磁片
+  </div>
+ 
       
     </div>
     <script src="script.js"></script>
