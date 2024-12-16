@@ -196,7 +196,7 @@ a {
   color: black;
 }
 
-.album-info ::after {
+.album-info a::after {
   content: "";
   position: absolute;
   bottom: 0;
