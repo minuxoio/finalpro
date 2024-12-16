@@ -90,7 +90,7 @@ body {
 }
 
 .logo img {
-  width: 150px; /* 讓圖片填滿容器的寬度 */
+  width: 260px; /* 讓圖片填滿容器的寬度 */
   max-width: none; /* 防止圖片過度縮放 */
   height: auto; /* 保持圖片的比例 */
 }
