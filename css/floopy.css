@@ -188,7 +188,7 @@ body {
   top: -140px; /* 距離頂部 0px */
   left: 380px; /* 水平居中 */
   transform: translateX(-50%); /* 水平居中對齊 */
-  transform: scale(0.6); /* 放大模型 */
+  transform: scale(0.2); /* 放大模型 */
 
   z-index: 0; /* 背景層，可根據需求調整 */
   border: none; /* 如果需要外框，可設置邊框樣式 */
