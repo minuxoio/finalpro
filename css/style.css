@@ -41,7 +41,7 @@ header.navigation {
 .nav-left {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
   top: 5vh; /* 與視窗頂部的間距 */
-  right: 90vw; /* 與視窗右側的間距 */
+  margin-left: 2vw; /* 與視窗右側的間距 */
 }
 
 .nav-left .left-image {
