@@ -16,8 +16,8 @@ body {
 .barcode-container {
   position: absolute;
   margin-top: 8.5vh; /* 與視窗頂部的間距 */
-  margin-left: 2vw; /* 與視窗右側的間距 */
-  scale: (0.7);
+  margin-left: -4vw; /* 與視窗右側的間距 */
+  scale: (0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,15 +72,10 @@ body {
 }
 
 .logo {
-  position: absolute; /* 使用絕對定位，控制在特定位置 */
-  bottom: 4vh; /* 與視窗底部的間距 */
-  right: 2vw;
-}
+  position: absolute;
 
-.logo img {
-  width: 150px; /* 讓圖片填滿容器的寬度 */
-  max-width: none; /* 防止圖片過度縮放 */
-  height: auto; /* 保持圖片的比例 */
+  margin-top: -18vh; /* 與視窗頂部的間距 */
+  margin-left: 80.5vw; /* 與視窗右側的間距 */
 }
 /* 左側導航樣式 */
 .runborder {
@@ -156,11 +151,11 @@ body {
 .nav-right {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
   top: 4vh; /* 與視窗頂部的間距 */
-  right: 4vw; /* 與視窗右側的間距 */
+  right: 2vw; /* 與視窗右側的間距 */
 }
 
 .nav-right .nav-image {
-  width: 18vw; /* 圖片寬度設為視窗寬度的 x% */
+  width: 20vw; /* 圖片寬度設為視窗寬度的 x% */
   height: auto; /* 自動調整高度比例 */
   max-width: 250px; /* 設定最大寬度，避免圖片過大 */
   max-height: 250px; /* 設定最大高度，保持比例 */
@@ -170,7 +165,7 @@ body {
 .right-vol {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
   top: 11vh; /* 與視窗頂部的間距 */
-  right: 4vw; /* 與視窗右側的間距 */
+  right: 2.5vw; /* 與視窗右側的間距 */
 }
 
 .right-vol .volume_icon {
@@ -185,10 +180,10 @@ body {
 /* Spline Viewer 定位與大小設置 */
 .spline-wrapper {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  top: -140px; /* 距離頂部 0px */
-  left: 380px; /* 水平居中 */
+  top: -109px; /* 距離頂部 0px */
+  left: 206px; /* 水平居中 */
   transform: translateX(-50%); /* 水平居中對齊 */
-  transform: scale(0.2); /* 放大模型 */
+  transform: scale(1.1); /* 放大模型 */
 
   z-index: 0; /* 背景層，可根據需求調整 */
   border: none; /* 如果需要外框，可設置邊框樣式 */
