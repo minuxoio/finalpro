@@ -222,7 +222,7 @@ span.tc_space {
   position: relative; /* 定位父容器 */
   gap: 0; /* 圖片之間間距 */
   scale: 0.8;
-  bottom: -25vh;
+  bottom: -23vh;
   left: 10vw;
 }
 
