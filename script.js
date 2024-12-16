@@ -60,8 +60,8 @@ function downloadDiskImage() {
   const diskNumber =
     new URLSearchParams(window.location.search).get("disk") || "1";
   const link = document.createElement("a");
-  link.href = `./images/qr${diskNumber}.svg`;
-  link.download = `qr${diskNumber}.svg`;
+  link.href = `./images/qr${diskNumber}.png`;
+  link.download = `qr${diskNumber}.png`;
   link.click();
 }
 // 點擊 3D Viewer 後觸發邏輯
@@ -86,7 +86,7 @@ function showImages() {
     new URLSearchParams(window.location.search).get("disk") || "1";
 
   // 顯示對應的磁片圖片
-  diskImage.style.backgroundImage = `url('./images/qr${diskNumber}.svg')`;
+  diskImage.style.backgroundImage = `url('./images/qr${diskNumber}.png')`;
   diskImage.classList.add("show");
 
   // 顯示下載按鈕
@@ -98,27 +98,27 @@ function downloadDiskImage() {
   const diskNumber =
     new URLSearchParams(window.location.search).get("disk") || "1";
   const link = document.createElement("a");
-  link.href = `./images/qr${diskNumber}.svg`;
-  link.download = `qr${diskNumber}.svg`;
+  link.href = `./images/qr${diskNumber}.png`;
+  link.download = `qr${diskNumber}.png`;
   link.click();
 }
 const floatingText = document.getElementById("floating-text");
 const diskDrive = document.getElementById("disk-drive");
 
-// 點擊磁碟機的事件
 diskDrive.addEventListener("click", () => {
   console.log("磁碟機被點擊");
 
   if (floatingText) {
-    // 停止動畫，淡出浮動文字
-    floatingText.style.animation = "none"; // 停止動畫
-    floatingText.style.transition = "opacity 0.5s ease"; // 平滑淡出效果
-    floatingText.style.opacity = "0"; // 設定透明度
+    // 1. 停止動畫
+    floatingText.style.animation = "none";
+    floatingText.style.webkitAnimation = "none"; // 兼容瀏覽器
 
-    // 完全隱藏
-    setTimeout(() => {
-      floatingText.style.display = "none"; // 移除文字
-      console.log("浮動文字已隱藏");
-    }, 500); // 延遲 0.5 秒後執行
+    // 2. 強制設置 opacity 和 display
+    floatingText.style.transition = "none"; // 移除任何過渡效果
+    floatingText.style.opacity = "0"; // 立即變為透明
+    floatingText.style.visibility = "hidden"; // 隱藏元素
+    floatingText.style.display = "none"; // 徹底移除元素
+
+    console.log("浮動文字已隱藏");
   }
 });

@@ -31,15 +31,11 @@
 
       <!-- 磁片與下載按鈕 -->
       <div class="disk-drive">
-        <img
-          src="./images/disk_1.svg"
-          alt="Disk Drive Placeholder"
-          id="disk-drive"
-        />
+       
       </div>
       <div class="disk" id="disk-image"></div>
       <div class="download-button" onclick="downloadDiskImage()">
-        即刻下載你的專屬磁片
+        <h4>即刻下載你的專屬磁片</h4>
       </div>
 
       <!-- 底部版權資訊 -->
@@ -75,6 +71,10 @@
           ⬊⬊⬊⬊
         </p>
       </div>
+
+     
+      </div>
+
       <!-- 右下角標誌 -->
       <div class="logo">
         <img
@@ -116,13 +116,25 @@
     <<<span class="tc_space"> 點擊此磁碟機 </span>>>
   </div>
   
+  
   <!-- 新增磁片容器 -->
   <div class="disk" id="disk-image"></div>
   <div class="download-button" id="download-button" onclick="downloadDiskImage()">
     即刻下載你的專屬磁片
   </div>
  
-      
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const floatingText = document.getElementById("floating-text");
+
+      document.addEventListener("click", function () {
+        if (floatingText) {
+          floatingText.classList.add("hidden");
+          console.log("點擊成功，浮動文字已隱藏");
+        }
+      });
+    });
+  </script>
     </div>
     <script src="script.js"></script>
   </body>
