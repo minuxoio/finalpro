@@ -40,8 +40,8 @@ header.navigation {
 
 .nav-left {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  top: 8vh; /* 與視窗頂部的間距 */
-  right: 82vw; /* 與視窗右側的間距 */
+  top: 5vh; /* 與視窗頂部的間距 */
+  margin-left: 2vw; /* 與視窗右側的間距 */
 }
 
 .nav-left .left-image {
@@ -222,7 +222,7 @@ span.tc_space {
   position: relative; /* 定位父容器 */
   gap: 0; /* 圖片之間間距 */
   scale: 0.8;
-  bottom: -15vh;
+  bottom: -25vh;
   left: 10vw;
 }
 
