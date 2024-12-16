@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic Barcode & Time</title>
     <link rel="stylesheet" href="css/floopy.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
-    ></script>
+   
   </head>
   <body>
 
@@ -31,15 +28,11 @@
 
       <!-- 磁片與下載按鈕 -->
       <div class="disk-drive">
-        <img
-          src="./images/disk_1.svg"
-          alt="Disk Drive Placeholder"
-          id="disk-drive"
-        />
+       
       </div>
       <div class="disk" id="disk-image"></div>
       <div class="download-button" onclick="downloadDiskImage()">
-        即刻下載你的專屬磁片
+        <h4>即刻下載你的專屬磁片</h4>
       </div>
 
       <!-- 底部版權資訊 -->
@@ -75,15 +68,18 @@
           ⬊⬊⬊⬊
         </p>
       </div>
+
+     
+      </div>
+
       <!-- 右下角標誌 -->
       <div class="logo">
-        <img
-          src="./images/title.webp"
-          alt="Logo Placeholder"
-          width="260"
-          height="auto"
-        />
+        <a href="index.html">
+          <img src="images/title.webp" />
+        </a>
       </div>
+
+
     </div>
     <!-- 左側導航 -->
 
@@ -116,13 +112,25 @@
     <<<span class="tc_space"> 點擊此磁碟機 </span>>>
   </div>
   
+  
   <!-- 新增磁片容器 -->
   <div class="disk" id="disk-image"></div>
   <div class="download-button" id="download-button" onclick="downloadDiskImage()">
     即刻下載你的專屬磁片
   </div>
  
-      
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const floatingText = document.getElementById("floating-text");
+
+      document.addEventListener("click", function () {
+        if (floatingText) {
+          floatingText.classList.add("hidden");
+          console.log("點擊成功，浮動文字已隱藏");
+        }
+      });
+    });
+  </script>
     </div>
     <script src="script.js"></script>
   </body>
