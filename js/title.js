@@ -53,3 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// 取得 audio 元素
+const audio = document.getElementById("myAudio");
+
+// 設定預設音量為 50%（範圍 0.0 ~ 1.0）
+audio.volume = 0.0;
