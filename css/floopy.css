@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
 }
 .container {
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -26,8 +26,8 @@ body {
 
 .barcode-container {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  left: -6vh; /* 與視窗頂部的間距 */
-  margin-top: 3.3vw; /* 與視窗右側的間距 */
+  left: -6.5vh; /* 與視窗頂部的間距 */
+  margin-top: 5.7vw; /* 與視窗右側的間距 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -347,7 +347,7 @@ span.tc_space {
   background-position: center;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.0002s ease;
+  transition: transform 0.00015s ease;
 }
 
 .disk.show {
@@ -355,32 +355,12 @@ span.tc_space {
   transform: translate(-50%, -50%) scale(2.5);
 }
 .spline-wrapper {
-  position: absolute;
-  top: 50%; /* 垂直置中 */
-  left: 50%; /* 水平置中 */
-  width: 70vw; /* 寬度為視窗寬度的 70% */
-  max-width: 700px; /* 設置最大寬度 */
-  aspect-ratio: 1.5; /* 根據你提供的磁碟機比例調整 */
-  transform: translate(-50%, -50%) scale(0.9); /* 完全居中，微縮小 */
-  overflow: hidden; /* 防止超出 */
-  z-index: 1; /* 確保顯示在前面 */
-}
-
-.disk-drive {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%; /* 相對於父容器的大小 */
-  transform: translate(-50%, -50%); /* 完全居中 */
-  z-index: 2; /* 保證顯示在正確的層級 */
-}
-
-.disk {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20vw; /* 寬度自適應視窗大小 */
-  max-width: 200px; /* 限制最大寬度 */
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.3s ease;
+  position: absolute; /* 絕對定位 */
+  top: 74.1vh;
+  left: 41.7vw;
+  scale: 0.85;
+  width: 924.8px; /* 固定寬度 */
+  height: 2000px; /* 固定高度 */
+  transform: translate(-50%, -50%); /* 水平垂直居中 */
+  overflow: hidden; /* 防止內容超出 */
 }
