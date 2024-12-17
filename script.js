@@ -80,7 +80,7 @@ window.onload = function () {
       console.log("3D 模型被點擊");
       setTimeout(() => {
         showImages();
-      }, 2300);
+      }, 2397);
     });
   }
 };
