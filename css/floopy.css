@@ -26,7 +26,7 @@ body {
 
 .barcode-container {
   position: absolute; /* 使用絕對定位，控制在特定位置 */
-  left: -8vh; /* 與視窗頂部的間距 */
+  left: -6vh; /* 與視窗頂部的間距 */
   margin-top: 3.3vw; /* 與視窗右側的間距 */
   display: flex;
   flex-direction: column;
@@ -216,10 +216,10 @@ body {
 .download-button {
   display: none; /* 初始隱藏 */
   position: absolute;
-  top: 90%; /* 根據需求調整位置 */
+  top: 88% !important; /* 根據需求調整位置 */
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
+  font-size: 20px;
   color: rgb(39, 39, 39);
   cursor: pointer;
 }
@@ -340,7 +340,7 @@ span.tc_space {
   width: 202.7px;
   height: 202.7px;
   position: absolute;
-  top: 54.17vh;
+  top: 51.7vh;
   left: 50vw;
   background-size: contain;
   background-repeat: no-repeat;
@@ -356,11 +356,11 @@ span.tc_space {
 }
 .spline-wrapper {
   position: absolute; /* 絕對定位 */
-  top: 50vh; /* 垂直居中 */
-  left: 42.7vw; /* 水平居中 */
-  scale: 1.08;
-  width: 800px; /* 固定寬度 */
-  height: 1000px; /* 固定高度 */
-  transform: translate(-50%, -50%); /* 居中對齊 */
+  top: 74.1vh;
+  left: 41.7vw;
+  scale: 0.85;
+  width: 924.8px; /* 固定寬度 */
+  height: 2000px; /* 固定高度 */
+  transform: translate(-50%, -50%); /* 水平垂直居中 */
   overflow: hidden; /* 防止內容超出 */
 }
